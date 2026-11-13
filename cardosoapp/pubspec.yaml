@@ -1,0 +1,75 @@
+
+name: cardosoapp
+description: "Aplicativo de gerenciamento de pedidos da Cardoso Burguer House."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ícones do aplicativo
+  cupertino_icons: ^1.0.8
+
+  # Comunicação com o backend Node.js
+  http: ^1.6.0
+
+  # Pedidos em tempo real
+  socket_io_client: ^3.1.2
+
+  # Armazenamento seguro da sessão
+  flutter_secure_storage: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Boas práticas e análise do código
+  flutter_lints: ^6.0.0
+
+  # Ícone personalizado do aplicativo
+  flutter_launcher_icons: ^0.14.4
+
+  # Tela de abertura personalizada
+  flutter_native_splash: ^2.4.6
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/branding/app_icon.png
+    - assets/branding/splash_logo.png
+
+# ==========================================
+# ÍCONE DO APLICATIVO
+# ==========================================
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+
+  image_path: assets/branding/app_icon.png
+
+  adaptive_icon_background: "#0C1014"
+  adaptive_icon_foreground: assets/branding/app_icon.png
+
+# ==========================================
+# SPLASH SCREEN
+# ==========================================
+
+flutter_native_splash:
+  color: "#0C1014"
+  image: assets/branding/splash_logo.png
+
+  android: true
+  ios: false
+  fullscreen: true
+
+  android_12:
+    color: "#0C1014"
+    image: assets/branding/splash_logo.png
